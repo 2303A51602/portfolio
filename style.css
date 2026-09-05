@@ -1,0 +1,847 @@
+/* ========================================
+   GENERAL STYLES
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* ========================================
+   HEADER & NAVIGATION
+======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 70px;
+
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #374151;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* ========================================
+   HOME SECTION
+======================================== */
+
+.home-section {
+    max-width: 1200px;
+    min-height: 90vh;
+
+    margin: auto;
+    padding: 70px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.hello {
+    color: #2563eb;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    line-height: 1.1;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.home-content h2 {
+    font-size: 28px;
+
+    color: #4b5563;
+
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    max-width: 650px;
+
+    color: #6b7280;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   HOME BUTTONS
+======================================== */
+
+.home-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+}
+
+.secondary-btn:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* ========================================
+   PROFILE IMAGE - SQUARE
+======================================== */
+
+.profile-container {
+    width: 330px;
+    height: 330px;
+
+    flex-shrink: 0;
+
+    padding: 8px;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.profile-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       Keeps the face towards the top
+       when cropping the portrait image.
+    */
+    object-position: center top;
+
+    border: 6px solid white;
+
+    border-radius: 12px;
+
+    display: block;
+}
+
+
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #6b7280;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.about-card h3 {
+    color: #2563eb;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #6b7280;
+}
+
+
+/* ========================================
+   SKILLS SECTION
+======================================== */
+
+.skills-section {
+    background: #eef4ff;
+
+    max-width: 100%;
+
+    padding-left: max(25px, calc((100% - 1150px) / 2));
+    padding-right: max(25px, calc((100% - 1150px) / 2));
+}
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    margin-bottom: 20px;
+
+    color: #111827;
+}
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.skill-list span,
+.technologies span {
+    padding: 7px 13px;
+
+    background: #e8f0ff;
+
+    color: #2563eb;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   PROJECTS SECTION
+======================================== */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-number {
+    font-size: 16px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 23px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #6b7280;
+
+    margin-bottom: 20px;
+}
+
+.technologies {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   EDUCATION SECTION
+======================================== */
+
+.education-section {
+    background: #eef4ff;
+
+    max-width: 100%;
+
+    padding-left: max(25px, calc((100% - 1150px) / 2));
+    padding-right: max(25px, calc((100% - 1150px) / 2));
+}
+
+.timeline {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 35px;
+
+    border-left: 3px solid #2563eb;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: -10px;
+    top: 0;
+
+    width: 17px;
+    height: 17px;
+
+    background: #2563eb;
+
+    border-radius: 50%;
+
+    border: 3px solid white;
+}
+
+.timeline-content {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.date {
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    color: #4b5563;
+
+    margin-bottom: 15px;
+}
+
+.timeline-content p {
+    color: #6b7280;
+
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   INTERNSHIP SECTION
+======================================== */
+
+.internship-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.internship-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.internship-card h3 {
+    font-size: 23px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+.internship-card h4 {
+    color: #2563eb;
+
+    margin-bottom: 15px;
+}
+
+.internship-card p {
+    color: #6b7280;
+
+    margin-bottom: 15px;
+}
+
+.internship-card ul {
+    color: #6b7280;
+}
+
+.internship-card li {
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   CERTIFICATIONS
+======================================== */
+
+.certifications-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.certificate-card {
+    background: white;
+
+    padding: 25px;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.certificate-card h3 {
+    font-size: 18px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+.certificate-card p {
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding-top: 60px;
+}
+
+.footer-content {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 0 25px 50px;
+}
+
+.footer-content h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.footer-content > p {
+    color: #d1d5db;
+
+    margin-bottom: 25px;
+}
+
+.contact-details,
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 15px;
+}
+
+.contact-details a,
+.social-links a {
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.contact-details a:hover,
+.social-links a:hover {
+    color: #60a5fa;
+}
+
+.social-links a {
+    padding: 8px 18px;
+
+    border: 1px solid #4b5563;
+
+    border-radius: 6px;
+}
+
+.copyright {
+    border-top: 1px solid #374151;
+
+    padding: 20px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 45px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certifications-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 18px;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .home-section {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h2 {
+        font-size: 24px;
+    }
+
+    .intro-text {
+        margin: auto;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+
+    /* Square profile image on tablet/mobile */
+
+    .profile-container {
+        width: 250px;
+        height: 250px;
+
+        border-radius: 18px;
+    }
+
+    .profile-container img {
+        border-radius: 10px;
+    }
+
+
+    .about-content,
+    .internship-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .certifications-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Square profile image */
+
+    .profile-container {
+        width: 210px;
+        height: 210px;
+
+        border-radius: 15px;
+    }
+
+    .profile-container img {
+        border-radius: 8px;
+    }
+
+
+    .contact-details {
+        flex-direction: column;
+    }
+
+}
